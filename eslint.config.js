@@ -2,16 +2,16 @@
 import globals from "globals";
 import js from "@eslint/js";
 import reactPlugin from "eslint-plugin-react";
-import nextPlugin from "eslint-plugin-next";
+import nextConfig from "eslint-config-next";
 
 export default [
-  // 1. Global Recommended Rules
+  // 1. JavaScript recommended
   js.configs.recommended,
 
-  // 2. Next.js core web vitals & TypeScript configs
-  ...nextPlugin.configs["core-web-vitals"],
+  // 2. Next.js configs (core web vitals + TS support)
+  ...nextConfig(),
 
-  // 3. React-specific configs
+  // 3. React-specific
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
@@ -27,7 +27,7 @@ export default [
     },
   },
 
-  // 4. Global ignores
+  // 4. Ignores
   {
     ignores: ["dist/*", ".next/*"],
   },
