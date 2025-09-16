@@ -143,13 +143,16 @@ export default function About() {
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
+            {/* changed styles to make it responsive */}
             <Text
-              className={styles.textAlign}
+              className={`!text-2xl sm:!text-[2rem] ${styles.textAlign}`}
               variant="display-default-xs"
               onBackground="neutral-weak"
+              
             >
               {person.role}
             </Text>
+            
             {social.length > 0 && (
               <Row
                 className={styles.blockAlign}
