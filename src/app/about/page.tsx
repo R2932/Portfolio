@@ -196,13 +196,13 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" className="px-xl text-justify sm:!px-[0rem] sm:text-left">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" className="px-l sm:!px-[0rem]">
               {about.intro.description}
             </Column>
           )}
 
           {about.work.display && (
-            <Column className="px-xl sm:!px-[0rem] ">
+            <Column className="px-l sm:!px-[0rem] ">
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
                 {about.work.title}
               </Heading>
@@ -269,7 +269,7 @@ export default function About() {
           )}
 
           {about.studies.display && (
-            <Column className="px-xl sm:!px-[0rem] ">
+            <Column className="px-l sm:!px-[0rem] ">
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
                 {about.studies.title}
               </Heading>
@@ -289,7 +289,7 @@ export default function About() {
           )}
 
           {about.technical.display && (
-            <Column className="px-xl sm:!px-[0rem] ">
+            <Column className="px-l sm:!px-[0rem] ">
               <Heading
                 as="h2"
                 id={about.technical.title}
