@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { notFound } from "next/navigation";
 
 // In-memory cache to store post data
 const postCache = new Map();

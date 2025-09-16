@@ -1,4 +1,4 @@
-import { about, baseURL, home, person, routes } from "@/resources";
+import { about, baseURL, home, person } from "@/resources";
 import {
   Avatar,
   Badge,
@@ -17,13 +17,9 @@ import {
 //import { Projects } from "@/components/work/Projects";
 //import { Posts } from "@/components/blog/Posts";
 import { GlowBox } from "@/components/GlowBox";
-import { data } from "@/components/ui/content";
-import { Timeline } from "@/components/ui/timeline";
 import "@/components/ui/timeline.css";
 import Changelog from "@/components/changelog/changelog";
-import { Meteors } from "@/components/magicui/meteors";
 import { TextReveal } from "@/components/magicui/text-reveal";
-import { BackgroundLines } from "@/components/ui/background-lines";
 
 export async function generateMetadata() {
   return Meta.generate({

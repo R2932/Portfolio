@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import type { IconName } from "@/resources/icons";
 import type { zones } from "tzdata";
 
@@ -37,8 +38,10 @@ export type Newsletter = {
   /** Whether to display the newsletter section */
   display: boolean;
   /** Title of the newsletter   */
+   
   title: React.ReactNode;
   /** Description of the newsletter */
+   
   description: React.ReactNode;
 };
 

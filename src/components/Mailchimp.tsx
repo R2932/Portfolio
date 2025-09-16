@@ -1,10 +1,13 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 "use client";
 
 import { mailchimp, newsletter } from "@/resources";
-import { Background, Button, Column, Heading, Input, Row, Text } from "@once-ui-system/core";
+import { Background, Column } from "@once-ui-system/core";
 import type { SpacingToken, opacity } from "@once-ui-system/core";
 import { useState } from "react";
 
+// eslint-disable-next-line no-unused-vars
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeout: ReturnType<typeof setTimeout>;
   return ((...args: Parameters<T>) => {
@@ -13,6 +16,7 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
   }) as T;
 }
 
+// eslint-disable-next-line no-undef
 export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex }) => {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");

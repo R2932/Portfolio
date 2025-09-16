@@ -21,10 +21,10 @@ export function Posts({
 
   // Exclude by slug (exact match)
   if (exclude.length) {
-    allBlogs = allBlogs.filter((post) => !exclude.includes(post.slug));
+    allBlogs = allBlogs.filter((post: { slug: string; }) => !exclude.includes(post.slug));
   }
 
-  const sortedBlogs = allBlogs.sort((a, b) => {
+  const sortedBlogs = allBlogs.sort((a: { metadata: { publishedAt: string | number | Date; }; }, b: { metadata: { publishedAt: string | number | Date; }; }) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
 
@@ -36,7 +36,7 @@ export function Posts({
     <>
       {displayedBlogs.length > 0 && (
         <Grid columns={columns} s={{ columns: 1 }} fillWidth marginBottom="40" gap="16">
-          {displayedBlogs.map((post) => (
+          {displayedBlogs.map((post:{ slug: string; }) => (
             <Post key={post.slug} post={post} thumbnail={thumbnail} direction={direction} />
           ))}
         </Grid>

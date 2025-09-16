@@ -1,11 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Column, Text } from "@once-ui-system/core";
 import { motion, useScroll, useTransform } from "motion/react";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
-import { DotPattern } from "../magicui/dot-pattern";
 
 interface TimelineEntry {
   title: string;

@@ -4,11 +4,8 @@ import { about, baseURL, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { getPosts } from "@/utils/utils";
 import {
-  Avatar,
   AvatarGroup,
-  Button,
   Column,
-  Flex,
   Heading,
   Line,
   Media,
@@ -20,10 +17,11 @@ import {
 } from "@once-ui-system/core";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
-  return posts.map((post) => ({
+  return posts.map((post: { slug: any; }) => ({
     slug: post.slug,
   }));
 }
@@ -39,7 +37,7 @@ export async function generateMetadata({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "work", "projects"]);
-  const post = posts.find((post) => post.slug === slugPath);
+  const post = posts.find((post: { slug: string; }) => post.slug === slugPath);
 
   if (!post) return {};
 
@@ -62,14 +60,14 @@ export default async function Project({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+  const post = getPosts(["src", "app", "work", "projects"]).find((post: { slug: string; }) => post.slug === slugPath);
 
   if (!post) {
     notFound();
   }
 
   const avatars =
-    post.metadata.team?.map((person) => ({
+    post.metadata.team?.map((person: { avatar: any; }) => ({
       src: person.avatar,
     })) || [];
 
@@ -105,9 +103,9 @@ export default async function Project({
         <Row gap="16" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}
           <Text variant="label-default-m" onBackground="brand-weak">
-            {post.metadata.team?.map((member, idx) => (
+            {post.metadata.team?.map((member: { linkedIn: string | undefined; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: Key | null | undefined) => (
               <span key={idx}>
-                {idx > 0 && (
+                {(idx as number) > 0 && (
                   <Text as="span" onBackground="neutral-weak">
                     ,{" "}
                   </Text>

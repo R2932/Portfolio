@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc";
 import type React from "react";
 import type { ReactNode } from "react";

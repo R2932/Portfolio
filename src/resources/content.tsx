@@ -1,6 +1,6 @@
 import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Rohit",
@@ -15,7 +15,7 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: <>Weekly thoughts on tech, innovation, and unstoppable growth</>,
 };
 
@@ -62,7 +62,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Rohit, a software engineer passionate about building impactful tech, leading teams, and
+      I&apos;m Rohit, a software engineer passionate about building impactful tech, leading teams, and
       creating solutions that push boundaries.
     </>
   ),
@@ -117,7 +117,7 @@ const about: About = {
         role: "Social Intern",
         achievements: [
           <>Contributed to the National Environment Youth Parliament with NGOs.</>,
-          <>Worked on environmental awareness initiatives under 'Paryavaran Chetna'.</>,
+          <>Worked on environmental awareness initiatives under &apos;Paryavaran Chetna&apos;.</>,
         ],
         images: [],
       },

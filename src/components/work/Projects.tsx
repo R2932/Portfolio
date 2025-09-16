@@ -1,6 +1,7 @@
 import { ProjectCard } from "@/components";
 import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
+import { Key } from "react";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -12,10 +13,10 @@ export function Projects({ range, exclude }: ProjectsProps) {
 
   // Exclude by slug (exact match)
   if (exclude && exclude.length > 0) {
-    allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
+    allProjects = allProjects.filter((post: { slug: string; }) => !exclude.includes(post.slug));
   }
 
-  const sortedProjects = allProjects.sort((a, b) => {
+  const sortedProjects = allProjects.sort((a: { metadata: { publishedAt: string | number | Date; }; }, b: { metadata: { publishedAt: string | number | Date; }; }) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
 
@@ -25,7 +26,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
 
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      {displayedProjects.map((post, index) => (
+      {displayedProjects.map((post: { slug: Key | null | undefined; metadata: { images: string[]; title: string; summary: string; team: any[]; link: any; }; content: string; }, index: number) => (
         <ProjectCard
           priority={index < 2}
           key={post.slug}
@@ -34,7 +35,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
           title={post.metadata.title}
           description={post.metadata.summary}
           content={post.content}
-          avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
+          avatars={post.metadata.team?.map((member: { avatar: any; }) => ({ src: member.avatar })) || []}
           link={post.metadata.link || ""}
         />
       ))}

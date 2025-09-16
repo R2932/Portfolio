@@ -31,6 +31,7 @@ export async function generateMetadata() {
 export default async function RootLayout({
   children,
 }: Readonly<{
+  // eslint-disable-next-line no-undef
   children: React.ReactNode;
 }>) {
   return (
@@ -47,8 +48,7 @@ export default async function RootLayout({
       )}
     >
       <head>
-        <Script>
-          <script
+        <Script
             id="theme-init"
             // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
             dangerouslySetInnerHTML={{
@@ -105,8 +105,7 @@ export default async function RootLayout({
               })();
             `,
             }}
-          />
-        </Script>
+        />
       </head>
       <Providers>
         <Column

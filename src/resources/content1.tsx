@@ -1,6 +1,6 @@
 import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Selene",
@@ -16,7 +16,7 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
@@ -71,7 +71,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I&apos;m Selene, a design engineer at{" "}
       <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"

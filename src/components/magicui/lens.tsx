@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useMotionTemplate } from "motion/react";
 import type React from "react";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 interface Position {
   x: number;
@@ -20,7 +20,6 @@ export function Lens({
   children,
   zoomFactor = 1.3,
   lensSize = 170,
-  lensColor = "black",
 }: LensProps) {
   const [isHovering, setIsHovering] = useState(false);
   const [mousePosition, setMousePosition] = useState<Position>({ x: 0, y: 0 });

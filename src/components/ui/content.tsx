@@ -1,4 +1,3 @@
-import { Text } from "@once-ui-system/core";
 import Image from "next/image";
 
 export const data = [
