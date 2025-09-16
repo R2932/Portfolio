@@ -10,9 +10,7 @@ export {
   gallery,
 } from "./content";
 
-export {
-  Headline,
-} from "./content"
+export { Headline } from "./content";
 
 export {
   display,

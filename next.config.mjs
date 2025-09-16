@@ -10,13 +10,12 @@ const withMDX = createMDX({
     remarkPlugins: [],
     rehypePlugins: [],
   },
-})
-
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
- // pageExtensions: ["ts", "tsx", "md", "mdx"],
-  transpilePackages: ["next-mdx-remote","geist"],
+  // pageExtensions: ["ts", "tsx", "md", "mdx"],
+  transpilePackages: ["next-mdx-remote", "geist"],
   images: {
     remotePatterns: [
       {
@@ -30,9 +29,9 @@ const nextConfig = {
         pathname: "**",
       },
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "**",
       },
     ],
   },
@@ -47,4 +46,4 @@ const nextConfig = {
 export default withMDX({
   ...nextConfig,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-})
+});

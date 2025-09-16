@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import { Row, ToggleButton, useTheme } from "@once-ui-system/core";
+import type React from "react";
+import { useEffect, useState } from "react";
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
@@ -10,16 +11,12 @@ export const ThemeToggle: React.FC = () => {
 
   useEffect(() => {
     setMounted(true);
-    setCurrentTheme(
-      document.documentElement.getAttribute("data-theme") || "light"
-    );
+    setCurrentTheme(document.documentElement.getAttribute("data-theme") || "light");
   }, []);
 
   useEffect(() => {
     if (mounted) {
-      setCurrentTheme(
-        document.documentElement.getAttribute("data-theme") || "light"
-      );
+      setCurrentTheme(document.documentElement.getAttribute("data-theme") || "light");
     }
   }, [theme, mounted]);
 

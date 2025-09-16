@@ -1,13 +1,4 @@
-import type {
-  About,
-  Blog,
-  Gallery,
-  Home,
-  Newsletter,
-  Person,
-  Social,
-  Work,
-} from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
@@ -71,8 +62,8 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Rohit, a software engineer passionate about building impactful tech,
-      leading teams, and creating solutions that push boundaries.
+      I'm Rohit, a software engineer passionate about building impactful tech, leading teams, and
+      creating solutions that push boundaries.
     </>
   ),
 };
@@ -98,11 +89,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Rohit is a Nagpur-based software engineer and tech leader with a strong
-        background in Computer Vision, Machine Learning, and Full-Stack
-        Development. Having organized 20+ large-scale events, delivered live
-        sessions to 1000+ students, and mentored hackathon teams, he thrives at
-        the intersection of technology, leadership, and community building.
+        Rohit is a Nagpur-based software engineer and tech leader with a strong background in
+        Computer Vision, Machine Learning, and Full-Stack Development. Having organized 20+
+        large-scale events, delivered live sessions to 1000+ students, and mentored hackathon teams,
+        he thrives at the intersection of technology, leadership, and community building.
       </>
     ),
   },
@@ -149,7 +139,9 @@ const about: About = {
     institutions: [
       {
         name: "Bachelor of Engineering",
-        description: <>Pursuing Computer Science and Engineering with focus on AI, Cloud, and Systems.</>,
+        description: (
+          <>Pursuing Computer Science and Engineering with focus on AI, Cloud, and Systems.</>
+        ),
       },
       {
         name: "Google Cloud & AI Certifications",
@@ -157,7 +149,9 @@ const about: About = {
       },
       {
         name: "IEEE Membership",
-        description: <>Active IEEE Member for 1+ years, contributing to community-driven projects.</>,
+        description: (
+          <>Active IEEE Member for 1+ years, contributing to community-driven projects.</>
+        ),
       },
     ],
   },
@@ -167,9 +161,7 @@ const about: About = {
     skills: [
       {
         title: "Web Development",
-        description: (
-          <>Building scalable apps with React, Next.js, Node.js, and Tailwind CSS.</>
-        ),
+        description: <>Building scalable apps with React, Next.js, Node.js, and Tailwind CSS.</>,
         tags: [
           { name: "React", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
@@ -180,9 +172,7 @@ const about: About = {
       },
       {
         title: "Artificial Intelligence & CV",
-        description: (
-          <>Expertise in Computer Vision, Machine Learning, and AI-driven apps.</>
-        ),
+        description: <>Expertise in Computer Vision, Machine Learning, and AI-driven apps.</>,
         tags: [
           { name: "Python", icon: "python" },
           { name: "TensorFlow", icon: "tensorflow" },
@@ -192,9 +182,7 @@ const about: About = {
       },
       {
         title: "Programming & Systems",
-        description: (
-          <>Strong foundation in C++, Java, Data Structures, and Operating Systems.</>
-        ),
+        description: <>Strong foundation in C++, Java, Data Structures, and Operating Systems.</>,
         tags: [
           { name: "C++", icon: "cpp" },
           { name: "Java", icon: "java" },

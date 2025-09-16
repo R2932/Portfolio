@@ -1,14 +1,21 @@
-import { getPosts } from "@/utils/utils";
 import { baseURL, blog, person } from "@/resources";
+import { getPosts } from "@/utils/utils";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   const posts = getPosts(["src", "app", "blog", "posts"]);
 
   // Sort posts by date (newest first)
-  const sortedPosts = posts.sort((a: { metadata: { publishedAt: string | number | Date; }; }, b: { metadata: { publishedAt: string | number | Date; }; }) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
-  });
+  const sortedPosts = posts.sort(
+    (
+      a: { metadata: { publishedAt: string | number | Date } },
+      b: { metadata: { publishedAt: string | number | Date } },
+    ) => {
+      return (
+        new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime()
+      );
+    },
+  );
 
   // Generate RSS XML
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -29,7 +36,16 @@ export async function GET() {
     </image>
     ${sortedPosts
       .map(
-        (post: { metadata: { title: any; publishedAt: string | number | Date; summary: any; image: any; tag: any; }; slug: any; }) => `
+        (post: {
+          metadata: {
+            title: any;
+            publishedAt: string | number | Date;
+            summary: any;
+            image: any;
+            tag: any;
+          };
+          slug: any;
+        }) => `
     <item>
       <title>${post.metadata.title}</title>
       <link>${baseURL}/blog/${post.slug}</link>

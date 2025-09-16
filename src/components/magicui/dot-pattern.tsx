@@ -2,7 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import React, { useEffect, useId, useRef, useState } from "react";
+import type React from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 /**
  *  DotPattern Component Props
@@ -91,9 +92,7 @@ export function DotPattern({
 
   const dots = Array.from(
     {
-      length:
-        Math.ceil(dimensions.width / width) *
-        Math.ceil(dimensions.height / height),
+      length: Math.ceil(dimensions.width / width) * Math.ceil(dimensions.height / height),
     },
     (_, i) => {
       const col = i % Math.ceil(dimensions.width / width);
@@ -111,10 +110,7 @@ export function DotPattern({
     <svg
       ref={containerRef}
       aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full",
-        className,
-      )}
+      className={cn("pointer-events-none absolute inset-0 h-full w-full", className)}
       {...props}
     >
       <defs>
@@ -144,7 +140,7 @@ export function DotPattern({
             glow
               ? {
                   duration: dot.duration,
-                  repeat: Infinity,
+                  repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                   delay: dot.delay,
                   ease: "easeInOut",

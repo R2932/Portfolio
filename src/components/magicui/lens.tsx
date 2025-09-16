@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionTemplate } from "motion/react";
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import type React from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 interface Position {
   x: number;
@@ -35,9 +36,7 @@ export function Lens({
 
   const maskImage = useMotionTemplate`radial-gradient(circle ${
     lensSize / 2
-  }px at ${mousePosition.x}px ${
-    mousePosition.y
-  }px, black 100%, transparent 100%)`;
+  }px at ${mousePosition.x}px ${mousePosition.y}px, black 100%, transparent 100%)`;
 
   return (
     <div

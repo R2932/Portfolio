@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useSpring } from "motion/react";
-import { FC, JSX, useEffect, useRef, useState } from "react";
+import { type FC, type JSX, useEffect, useRef, useState } from "react";
 
 interface Position {
   x: number;
@@ -25,8 +25,7 @@ const DefaultCursorSVG: FC = () => {
   useEffect(() => {
     // 2. Function to check and update the theme from the HTML data-attribute
     const checkTheme = () => {
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "light";
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
       setTheme(currentTheme);
     };
 
@@ -85,15 +84,8 @@ const DefaultCursorSVG: FC = () => {
           <feOffset dy={2.25825} />
           <feGaussianBlur stdDeviation={2.25825} />
           <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_91_7928"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_91_7928" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -155,18 +147,14 @@ export function SmoothCursor({
       const currentPos = { x: e.clientX, y: e.clientY };
       updateVelocity(currentPos);
 
-      const speed = Math.sqrt(
-        Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2)
-      );
+      const speed = Math.sqrt(Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2));
 
       cursorX.set(currentPos.x);
       cursorY.set(currentPos.y);
 
       if (speed > 0.1) {
         const currentAngle =
-          Math.atan2(velocity.current.y, velocity.current.x) *
-            (180 / Math.PI) +
-          90;
+          Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) + 90;
 
         let angleDiff = currentAngle - previousAngle.current;
         if (angleDiff > 180) angleDiff -= 360;

@@ -1,10 +1,11 @@
 "use client";
 
-import { Column, Text } from "@once-ui-system/core";
-import { useScroll, useTransform, motion } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
-import { DotPattern } from "../magicui/dot-pattern";
 import { cn } from "@/lib/utils";
+import { Column, Text } from "@once-ui-system/core";
+import { motion, useScroll, useTransform } from "motion/react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
+import { DotPattern } from "../magicui/dot-pattern";
 
 interface TimelineEntry {
   title: string;
@@ -59,16 +60,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             A timeline showcasing the milestones, projects, and experiences that
             define my journey.
           </Text> */}
-          
         </Column>
 
         {/* Timeline items */}
         <div ref={ref} className="!relative !max-w-7xl !mx-auto !pb-20">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className="!flex !justify-start !pt-10 md:pt-40 md:gap-10"
-            >
+            <div key={index} className="!flex !justify-start !pt-10 md:pt-40 md:gap-10">
               {/* Left side (title + dot) */}
               <div className="!sticky !flex !flex-col md:flex-row !z-40 !items-center !top-40 !self-start !max-w-xs lg:max-w-sm md:w-full">
                 <div className="h-8 absolute left-2 md:left-3 w-8 rounded-full bg-white dark:bg-neutral-200 flex items-center justify-center">

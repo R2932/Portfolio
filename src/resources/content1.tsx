@@ -1,13 +1,4 @@
-import type {
-  About,
-  Blog,
-  Gallery,
-  Home,
-  Newsletter,
-  Person,
-  Social,
-  Work,
-} from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
@@ -55,9 +46,9 @@ const social: Social = [
 ];
 
 export const Headline = {
-  headline1 : "Turning raw logic",
-  headline2 : "into unstoppable code",
-}
+  headline1: "Turning raw logic",
+  headline2: "into unstoppable code",
+};
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
@@ -113,10 +104,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
+        into simple, elegant design solutions. Her work spans digital interfaces, interactive
+        experiences, and the convergence of design and technology.
       </>
     ),
   },
@@ -132,14 +122,14 @@ const about: About = {
           // biome-ignore lint/complexity/noUselessFragments: <explanation>
           // biome-ignore lint/correctness/useJsxKeyInIterable: <explanation>
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
+            engagement and 30% faster load times.
           </>,
           // biome-ignore lint/complexity/noUselessFragments: <explanation>
           // biome-ignore lint/correctness/useJsxKeyInIterable: <explanation>
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Spearheaded the integration of AI tools into design workflows, enabling designers to
+            iterate 50% faster.
           </>,
         ],
         images: [
@@ -160,14 +150,14 @@ const about: About = {
           // biome-ignore lint/complexity/noUselessFragments: <explanation>
           // biome-ignore lint/correctness/useJsxKeyInIterable: <explanation>
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Developed a design system that unified the brand across multiple platforms, improving
+            design consistency by 40%.
           </>,
           // biome-ignore lint/complexity/noUselessFragments: <explanation>
           // biome-ignore lint/correctness/useJsxKeyInIterable: <explanation>
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Led a cross-functional team to launch a new product line, contributing to a 15% increase
+            in overall company revenue.
           </>,
         ],
         images: [],
@@ -194,9 +184,7 @@ const about: About = {
     skills: [
       {
         title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
         tags: [
           {
             name: "Figma",
@@ -221,9 +209,7 @@ const about: About = {
       },
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
         tags: [
           {
             name: "JavaScript",

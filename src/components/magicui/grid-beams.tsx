@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
-import React, { HTMLAttributes, useMemo } from "react";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+import React, { type HTMLAttributes, useMemo } from "react";
 
 const createGridMask = (start: number, end: number): string => {
   const mid = (start + end) / 2;
@@ -96,13 +96,13 @@ const LightRay = React.memo<LightRayProps>(
           opacity: {
             duration: duration / speed,
             delay: delay / speed,
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           },
           transform: {
             duration: swayDuration / speed,
             delay: swayDelay / speed,
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           },
         }}
@@ -126,9 +126,7 @@ export const GridBeams: React.FC<GridBeamsProps> = ({
   ...props
 }) => {
   const rayConfigs = useMemo(() => {
-    return Array.from({ length: rayCount }, (_, i) =>
-      generateRayConfig(i, rayCount),
-    );
+    return Array.from({ length: rayCount }, (_, i) => generateRayConfig(i, rayCount));
   }, [rayCount]);
 
   const gridMask = useMemo(

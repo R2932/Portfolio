@@ -2,18 +2,18 @@
 
 import { mailchimp } from "@/resources";
 import {
-  //Button,
-  Heading,
   //Input,
   //Text,
   Background,
   Column,
+  type FlexProps,
+  //Button,
+  Heading,
   //Row,
   RevealFx,
-  FlexProps,
 } from "@once-ui-system/core";
-import { opacity, SpacingToken } from "@once-ui-system/core";
-import React from "react";
+import type { SpacingToken, opacity } from "@once-ui-system/core";
+import type React from "react";
 
 interface GlowBoxProps extends Omit<FlexProps, "children"> {
   children: React.ReactNode;
@@ -78,9 +78,9 @@ export const GlowBox: React.FC<GlowBoxProps> = ({ children, ...flex }) => {
         }}
       />
       {/* <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16"> */}
-        {/* <Heading wrap="balance" variant="display-strong-l"> */}
-          {children}
-        {/* </Heading> */}
+      {/* <Heading wrap="balance" variant="display-strong-l"> */}
+      {children}
+      {/* </Heading> */}
       {/* </RevealFx> */}
     </Column>
   );

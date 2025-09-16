@@ -6,7 +6,7 @@ export const LoaderOne = () => {
   const transition = (x: number) => {
     return {
       duration: 1,
-      repeat: Infinity,
+      repeat: Number.POSITIVE_INFINITY,
       repeatType: "loop" as const,
       delay: x * 0.2,
       ease: "easeInOut" as const,
@@ -52,7 +52,7 @@ export const LoaderTwo = () => {
   const transition = (x: number) => {
     return {
       duration: 2,
-      repeat: Infinity,
+      repeat: Number.POSITIVE_INFINITY,
       repeatType: "loop" as const,
       delay: x * 0.2,
       ease: "easeInOut" as const,
@@ -115,7 +115,7 @@ export const LoaderThree = () => {
         transition={{
           duration: 2,
           ease: "easeInOut",
-          repeat: Infinity,
+          repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
         }}
         d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"
@@ -134,7 +134,7 @@ export const LoaderFour = ({ text = "Loading..." }: { text?: string }) => {
         }}
         transition={{
           duration: 0.05,
-          repeat: Infinity,
+          repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
           repeatDelay: 2,
           ease: "linear",
@@ -153,7 +153,7 @@ export const LoaderFour = ({ text = "Loading..." }: { text?: string }) => {
         }}
         transition={{
           duration: 0.5,
-          repeat: Infinity,
+          repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
           ease: "linear",
           times: [0, 0.2, 0.5, 0.8, 1],
@@ -170,7 +170,7 @@ export const LoaderFour = ({ text = "Loading..." }: { text?: string }) => {
         }}
         transition={{
           duration: 0.8,
-          repeat: Infinity,
+          repeat: Number.POSITIVE_INFINITY,
           repeatType: "reverse",
           ease: "linear",
           times: [0, 0.3, 0.6, 0.8, 1],
@@ -201,7 +201,7 @@ export const LoaderFive = ({ text }: { text: string }) => {
           }}
           transition={{
             duration: 0.5,
-            repeat: Infinity,
+            repeat: Number.POSITIVE_INFINITY,
             repeatType: "loop",
             delay: i * 0.05,
             ease: "easeInOut",

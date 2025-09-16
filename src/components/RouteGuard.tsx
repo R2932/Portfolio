@@ -1,19 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { routes, protectedRoutes } from "@/resources";
-import {
-  Flex,
-  Spinner,
-  Button,
-  Heading,
-  Column,
-  PasswordInput,
-} from "@once-ui-system/core";
 import NotFound from "@/app/not-found";
+import { protectedRoutes, routes } from "@/resources";
+import { Button, Column, Flex, Heading, PasswordInput, Spinner } from "@once-ui-system/core";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { LoaderThree } from "./ui/loader";
-
 
 interface RouteGuardProps {
   children: React.ReactNode;
@@ -87,13 +79,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
 
   if (loading) {
     return (
-      <Flex
-        as="main"
-        fillWidth
-        fillHeight
-        horizontal="center"
-        vertical="center"
-      >
+      <Flex as="main" fillWidth fillHeight horizontal="center" vertical="center">
         {/* <Flex fillWidth paddingY="128" horizontal="center"> */}
         {/* <Spinner /> */}
         <div className="flex h-screen w-full items-center justify-center">

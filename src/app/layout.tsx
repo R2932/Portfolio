@@ -5,18 +5,18 @@ import Script from "next/script";
 
 import classNames from "classnames";
 
+import { Footer, Header, Providers, RouteGuard } from "@/components";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
 import {
   Background,
   Column,
   Flex,
   Meta,
-  type opacity,
   RevealFx,
   type SpacingToken,
+  type opacity,
 } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -48,11 +48,11 @@ export default async function RootLayout({
     >
       <head>
         <Script>
-        <script
-          id="theme-init"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-          dangerouslySetInnerHTML={{
-            __html: `
+          <script
+            id="theme-init"
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+            dangerouslySetInnerHTML={{
+              __html: `
               (function() {
                 try {
                   const root = document.documentElement;
@@ -104,8 +104,8 @@ export default async function RootLayout({
                 }
               })();
             `,
-          }}
-        />
+            }}
+          />
         </Script>
       </head>
       <Providers>
@@ -118,7 +118,7 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
-          <SmoothCursor/>
+          <SmoothCursor />
           <RevealFx fill position="absolute">
             <Background
               mask={{

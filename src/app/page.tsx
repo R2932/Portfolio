@@ -1,29 +1,29 @@
+import { about, baseURL, home, person, routes } from "@/resources";
 import {
-  Heading,
-  Text,
-  Button,
   Avatar,
-  RevealFx,
-  Column,
   Badge,
+  Button,
+  Column,
+  Heading,
+  Meta,
+  RevealFx,
   Row,
   Schema,
-  Meta,
+  Text,
   //Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
 
 //import { Mailchimp } from "@/components";
 //import { Projects } from "@/components/work/Projects";
 //import { Posts } from "@/components/blog/Posts";
 import { GlowBox } from "@/components/GlowBox";
-import { Timeline } from "@/components/ui/timeline";
 import { data } from "@/components/ui/content";
+import { Timeline } from "@/components/ui/timeline";
 import "@/components/ui/timeline.css";
-import { TextReveal } from "@/components/magicui/text-reveal";
-import { Meteors } from "@/components/magicui/meteors";
-import { BackgroundLines } from "@/components/ui/background-lines";
 import Changelog from "@/components/changelog/changelog";
+import { Meteors } from "@/components/magicui/meteors";
+import { TextReveal } from "@/components/magicui/text-reveal";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -75,12 +75,7 @@ export default function Home() {
             </RevealFx>
           )}
 
-          <RevealFx
-            translateY="4"
-            fillWidth
-            horizontal="center"
-            paddingBottom="16"
-          >
+          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
             <GlowBox>
               <Heading wrap="balance" variant="display-strong-l">
                 {home.headline}
@@ -88,27 +83,12 @@ export default function Home() {
             </GlowBox>
           </RevealFx>
 
-          <RevealFx
-            translateY="8"
-            delay={0.2}
-            fillWidth
-            horizontal="center"
-            paddingBottom="32"
-          >
-            <Text
-              wrap="balance"
-              onBackground="neutral-weak"
-              variant="heading-default-xl"
-            >
+          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx
-            paddingTop="12"
-            delay={0.4}
-            horizontal="center"
-            paddingLeft="12"
-          >
+          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
             <Button
               id="about"
               data-border="rounded"
@@ -177,9 +157,9 @@ export default function Home() {
               variant="code-default-l"
               // className="!text-xl md:text-base !max-w-full"
             >
-              Explore the projects and milestones that highlight my journey in software engineering and problem-solving.
+              Explore the projects and milestones that highlight my journey in software engineering
+              and problem-solving.
             </Text>
-
           </TextReveal>
         </Column>
       </Column>
@@ -190,7 +170,7 @@ export default function Home() {
       </Column> */}
       <Column>
         <Column>
-          <Changelog/>
+          <Changelog />
         </Column>
       </Column>
     </Column>

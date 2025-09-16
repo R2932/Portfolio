@@ -73,7 +73,7 @@ export function getPosts(customPath: string[] = ["", "", "", ""]) {
 
   // If not, read the data from the filesystem
   const data = getMDXData(postsDir);
-  
+
   // Store the data in the cache for next time
   postCache.set(cacheKey, data);
 

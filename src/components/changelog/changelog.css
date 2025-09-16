@@ -3,7 +3,6 @@
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
-
 @layer theme {
   html .theme-changelog {
     --font-sans: var(--font-geist-sans);
@@ -81,7 +80,6 @@
       --animate-accordion-up: accordion-up 0.2s ease-out;
     }
   }
-
 
   html .dark .theme-changelog {
     /* Core dark-mode variables */
