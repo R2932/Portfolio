@@ -196,14 +196,14 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" className="px-xl text-justify sm:!px-[0rem] sm:text-left">
               {about.intro.description}
             </Column>
           )}
 
           {about.work.display && (
-            <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+            <Column className="px-xl sm:!px-[0rem] ">
+              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
                 {about.work.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -213,13 +213,21 @@ export default function About() {
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      <Text variant="heading-default-xs" onBackground="neutral-weak" className="hidden sm:block">
                         {experience.timeframe}
                       </Text>
                     </Row>
+
+                    <Row horizontal="between" vertical="end">
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak" marginBottom="m" className="sm:hidden !text-[0.8rem]">
+                        {experience.timeframe}
+                      </Text>
+                    </Row>
+
+
                     <Column as="ul" gap="16">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
@@ -257,12 +265,12 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </Column>
           )}
 
           {about.studies.display && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+            <Column className="px-xl sm:!px-[0rem] ">
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
                 {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -277,16 +285,16 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </Column>
           )}
 
           {about.technical.display && (
-            <>
+            <Column className="px-xl sm:!px-[0rem] ">
               <Heading
                 as="h2"
                 id={about.technical.title}
                 variant="display-strong-s"
-                marginBottom="40"
+                marginBottom="40" onBackground="neutral-weak"
               >
                 {about.technical.title}
               </Heading>
@@ -332,7 +340,7 @@ export default function About() {
                   </Column>
                 ))}
               </Column>
-            </>
+            </Column>
           )}
         </Column>
       </Row>
