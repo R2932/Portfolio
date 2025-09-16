@@ -117,7 +117,7 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
-          <div className="hidden"><SmoothCursor/></div>
+          <div className="hidden md:block lg:block xl:block"><SmoothCursor/></div>
           <RevealFx fill position="absolute">
             <Background
               mask={{
