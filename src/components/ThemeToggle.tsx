@@ -1,6 +1,6 @@
 "use client";
 
-import { Row, ToggleButton, useTheme } from "@once-ui-system/core";
+import { ToggleButton, useTheme } from "@once-ui-system/core";
 import type React from "react";
 import { useEffect, useState } from "react";
 
@@ -14,6 +14,7 @@ export const ThemeToggle: React.FC = () => {
     setCurrentTheme(document.documentElement.getAttribute("data-theme") || "light");
   }, []);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (mounted) {
       setCurrentTheme(document.documentElement.getAttribute("data-theme") || "light");

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 "use client";
 
 import { socialSharing } from "@/resources";
@@ -110,6 +111,7 @@ export function ShareSection({ title, url }: ShareSectionProps) {
       <Row data-border="rounded" gap="16" horizontal="center" wrap>
         {enabledPlatforms.map((platform, index) => (
           <Button
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             variant="secondary"
             size="s"

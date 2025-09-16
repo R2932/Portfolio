@@ -1,4 +1,5 @@
 import { baseURL, person } from "@/resources";
+import Image from "next/image";
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
@@ -14,7 +15,7 @@ export async function GET(request: Request) {
 
     if (resource) {
       const response = await fetch(resource[1]);
-      if (response.status == 200) {
+      if (response.status === 200) {
         return await response.arrayBuffer();
       }
     }
@@ -62,15 +63,14 @@ export async function GET(request: Request) {
             gap: "5rem",
           }}
         >
-          <img
+          <Image
             src={baseURL + person.avatar}
             style={{
               width: "12rem",
               height: "12rem",
               objectFit: "cover",
               borderRadius: "100%",
-            }}
-          />
+            }} alt={""}          />
           <div
             style={{
               display: "flex",

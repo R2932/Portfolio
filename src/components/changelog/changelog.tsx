@@ -1,5 +1,5 @@
 import { formatDate } from "@/lib/utils";
-import { ThemeToggle } from "../ui/theme-toggle";
+// import { ThemeToggle } from "../ui/theme-toggle";
 import "@/components/changelog/changelog.css";
 import { getMDXComponents } from "@/components/changelog/mdx-components";
 import { getSortedChangelogsData } from "@/lib/changelog";

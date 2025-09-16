@@ -7,16 +7,13 @@ import {
   Background,
   Column,
   type FlexProps,
-  //Button,
-  Heading,
-  //Row,
-  RevealFx,
 } from "@once-ui-system/core";
 import type { SpacingToken, opacity } from "@once-ui-system/core";
 import type React from "react";
 
 interface GlowBoxProps extends Omit<FlexProps, "children"> {
   children: React.ReactNode;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   [key: string]: any;
 }
 

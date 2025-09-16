@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 "use client";
 
 import NotFound from "@/app/not-found";
 import { protectedRoutes, routes } from "@/resources";
-import { Button, Column, Flex, Heading, PasswordInput, Spinner } from "@once-ui-system/core";
+import { Button, Column, Flex, Heading, PasswordInput } from "@once-ui-system/core";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LoaderThree } from "./ui/loader";
