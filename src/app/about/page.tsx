@@ -196,14 +196,14 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" className="px-l sm:!px-[0rem]">
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl" className="px-l sm:!px-[0rem]" onBackground="neutral-medium">
               {about.intro.description}
             </Column>
           )}
 
           {about.work.display && (
             <Column className="px-l sm:!px-[0rem] ">
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
+              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak" className="!text-gray-500 sm:!text-neutral-400">
                 {about.work.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -222,13 +222,13 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak" marginBottom="m" className="sm:hidden !text-[0.8rem]">
+                      <Text variant="heading-default-xs" onBackground="neutral-weak" marginBottom="m" className="!text-slate-200 sm:hidden !text-[0.8rem]">
                         {experience.timeframe}
                       </Text>
                     </Row>
 
 
-                    <Column as="ul" gap="16">
+                    <Column as="ul" gap="16" onBackground="neutral-weak">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
                           <Text
@@ -270,7 +270,7 @@ export default function About() {
 
           {about.studies.display && (
             <Column className="px-l sm:!px-[0rem] ">
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak">
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m" onBackground="neutral-weak" className="!text-gray-500 sm:!text-neutral-400">
                 {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -295,6 +295,7 @@ export default function About() {
                 id={about.technical.title}
                 variant="display-strong-s"
                 marginBottom="40" onBackground="neutral-weak"
+                className="!text-gray-500 sm:!text-neutral-400"
               >
                 {about.technical.title}
               </Heading>
