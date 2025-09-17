@@ -25,8 +25,8 @@ export async function generateMetadata() {
     baseURL: baseURL,
     path: home.path,
     image: home.image,
-    noindex:false,
-    nofollow:false
+    index:true,
+    follow:true
   });
 }
 
