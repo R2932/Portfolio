@@ -14,7 +14,7 @@ import type {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://portfolio-black-six-26.vercel.app/";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -195,9 +195,9 @@ const schema: SchemaConfig = {
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  threads: "https://www.threads.com/",
+  linkedin: "https://www.linkedin.com/company/",
+  discord: "https://discord.com/invite/",
 };
 
 // social sharing configuration for blog posts
